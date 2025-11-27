@@ -1,0 +1,46 @@
+@import "./tailwind.theme.css";
+
+  /**   STYLE CSS     **/
+body{
+  color: #061224;
+}
+
+@layer utilities {
+    .plex-sans {
+    font-family: "IBM Plex Sans", sans-serif;
+    }
+
+    .plex-serif{
+    font-family: "IBM Plex Serif", serif;
+    }
+
+    .active{
+      color: #1064E5;
+    }
+
+    .bg-header{
+      background-image: url(../assets/img-bg/header__bg.png);
+    }
+
+  .bg-404__gg {
+    background-image: url(../assets/img-bg/404_gg.png);
+  }
+
+    .underline-animate::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-out;
+    }
+  
+    .underline-animate:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
